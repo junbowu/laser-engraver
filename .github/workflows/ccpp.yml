@@ -9,12 +9,8 @@ jobs:
     
     
     steps:
-    - name: install qt
-      uses: actions/install-qt-action@v0.1.1
-      with:
-        packages: 'qt.qt5.5124.gcc_64'
-    - name: Test qmake
-      run: QT_QMAKE_EXECUTABLE="/Qt/5.12.4/gcc_64/bin/qmake" cmake .
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v1
     - name: cmake
       run: cmake .
     - name: make
