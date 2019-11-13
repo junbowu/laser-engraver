@@ -9,11 +9,11 @@ jobs:
     
     
     steps:
-    - name: Install Qt
+    - name: checkout 
+      uses: actions/checkout@v1
+    - name: install qt
       uses: jurplel/install-qt-action@v1
     - name: cmake
       run: cmake .
     - name: make
       run: make
-    - name: make check
-      run: make check
